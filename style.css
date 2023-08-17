@@ -234,16 +234,16 @@
   }
 
   .flex-group{
+    margin-top: 5%;;
     display: flex;
-    flex-direction: row;
     justify-content:center;
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
   }
   .flex-card{
-   max-width: 30%;
-   margin: 5%;
+   flex-basis: 25rem;
+   
   }
   .flex-text{
     font-family: var(--ff-small-header);
@@ -252,6 +252,28 @@
     margin-top: 5%;
     text-wrap: balance;
     text-align: center;
+  }
+
+  .button-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .button{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 4rem auto 1.5rem;
+    cursor: pointer;
+    
+    padding: 10px 73px;
+    border: 2px solid black;
+    background-color: var(--clr-white);
+  }
+  .button:hover{
+    background-color: var(--clr-black);
+    color: var(--clr-white);
   }
 
 
@@ -273,6 +295,13 @@
 
   @media (max-width: 680px) {
 
+    .img-logo{
+      max-width: 70%;        
+  }
+  .primary-header{
+    font-size: 2rem;
+  }
+
     .grid-group{
       grid-template-columns: 1fr;
       grid-template-rows: repeat(6, 50vh);
@@ -284,12 +313,13 @@
     }
     .content-header{
       font-size: 2rem;
+      padding: 20% 0;
     }
     .flex-group{
       flex-direction: column;
     }
     .flex-card{
-      max-width: fit-content;
+      flex-basis: 100%;
       padding: 0%;
     }
 
